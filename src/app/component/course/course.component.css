@@ -1,0 +1,14 @@
+.h-img {
+    height: 350px;
+}
+
+
+@media (max-width: 600px){
+    .course-image  {
+      width: 100%;
+    }
+  }
+  
+
+
+

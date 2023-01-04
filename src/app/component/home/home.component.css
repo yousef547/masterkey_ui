@@ -1,0 +1,26 @@
+.muted {
+    position: absolute;
+    top: 20px;
+    padding: 15px;
+    background: rgb(204 204 204 / 40%);
+    width: 55px;
+    z-index: 99999 !important;
+
+}
+.play {
+    position: absolute;
+    top: 80px;
+    padding: 15px;
+    background: rgb(204 204 204 / 40%);
+    width: 55px;
+    z-index: 99999 !important;
+}
+.muted > i , .play > i{
+    font-size: 25px;
+}
+
+.test-image{
+    width: 25% !important;
+    height: 100px !important;
+}
+

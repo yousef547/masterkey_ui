@@ -1,0 +1,39 @@
+<app-header title="Blogs"></app-header>
+
+<div class="container-fluid">
+    <button type="button" class="btn btn-outline-primary title-tip" (click)="getPosts(0)" title=" Tooltip on topTooltip on topTooltip on topTooltip on top">
+        All Subject
+    </button>
+    <button   *ngFor="let subject of subjects"  (click)="getPosts(subject.id)" type="button" class="btn btn-outline-primary title-tip"  attr.title="{{subject.subject }}">
+        {{subject.subject }}
+    </button>
+</div>
+
+
+
+
+
+
+<div class="container">
+    <div class="card"  *ngFor="let post of posts">
+        <div class="d-flex mb-3 justify-content-between">
+            <div class="d-flex my-2">
+                <div class="icon bg-transparent">
+                    <img src="../../../assets/img/master_key.jpg" class="rounded  w40" alt="">
+                </div>
+                <div>
+                    <h6 class="mb-0">Master Key</h6>
+                    <small>{{post.created_at | date  }}</small>
+                </div>
+            </div>
+        </div>
+        <img [src]="path+post.image" *ngIf="post.image != null" class="card-img-top" alt="...">
+        <div class="card-body" *ngIf="post.text != null">
+          <p class="card-text" [innerHtml]="post.text "></p>
+        </div>
+      </div>
+</div>
+<app-loader *ngIf="loader"></app-loader>
+
+
+

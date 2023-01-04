@@ -1,0 +1,39 @@
+html {
+    --animation-duration: 2s;
+    --animation-delay-multiplier: 200ms;
+  }
+
+  h1,h2,h3,h4,h5,h6,.color-text,.text-secondary{
+    color: #eec768 !important;
+}
+.backgroundColor {
+  background: #eec768 !important;
+
+}
+
+.section-title h6::before {
+  border-top: 2px dashed #eec768;
+}
+
+.bg-dark {
+  background-color: #46141f !important;
+}
+
+.btn-outline-primary {
+  color: #46141f !important;
+  border-color: #46141f !important;
+}
+
+
+.btn-outline-primary:hover {
+    color: #fff !important;
+    background-color: #46141f !important;
+    border-color: #46141f !important;
+}
+
+
+
+
+
+
+  

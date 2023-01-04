@@ -1,0 +1,159 @@
+<!-- Header Start -->
+
+<div class=" jumbotron-fluid position-relative overlay-bottom" style="margin-bottom: 90px;">
+    <div class="">
+        <button class="muted" type="button" (click)="muteF()">
+            <i class="fas fa-volume-up" id="muted"></i>
+        </button>
+        <button class="play" type="button" (click)="playPause()">
+            <i class="fas fa-pause-circle" id="play"></i>
+        </button>
+        <!-- (onload)="playPause()" -->
+        <video width="100%" class="vsingle" #myVideo id="playVideo" autoplay loop muted="false"
+            onloadedmetadata="this.muted = false" *ngIf="isPage">
+            <source [src]="path+video.video" type="video/mp4">
+        </video>
+    </div>
+</div>
+
+<!-- Header End -->
+<!-- About Start -->
+<div class="container-fluid py-5">
+    <div class="container py-5">
+        <div class="row">
+            <div class="col-lg-5 mb-5 mb-lg-0" style="min-height: 500px;" *ngIf="aboutUs?.aboutimg">
+                <div class="position-relative h-100">
+                    <img class="position-absolute w-100 h-100" alt="master key" src="{{path+aboutUs?.aboutimg}}"
+                        style="object-fit: cover;">
+                </div>
+            </div>
+            <div [ngClass]="aboutUs?.aboutimg == null ? 'col-lg-12' : 'col-lg-7'">
+                <div class="section-title position-relative mb-4 color-text">
+                    <h6 class="d-inline-block position-relative text-secondary text-uppercase pb-2">About Us</h6>
+                    <h1 class="display-4">{{aboutUs?.aboutus}}</h1>
+                </div>
+                <p>{{aboutUs?.description}}</p>
+                <div class="row pt-3 mx-0">
+                    <div class="col-3 px-0">
+                        <div class="bg-success text-center p-4">
+                            <h1 class="text-white" data-toggle="counter-up">{{aboutUs?.subjects}}</h1>
+                            <h6 class="text-uppercase text-white">Available<span class="d-block">Subjects</span></h6>
+                        </div>
+                    </div>
+                    <div class="col-3 px-0">
+                        <div class="bg-primary text-center p-4">
+                            <h1 class="text-white" data-toggle="counter-up">{{aboutUs?.courses}}</h1>
+                            <h6 class="text-uppercase text-white">Online<span class="d-block">Courses</span></h6>
+                        </div>
+                    </div>
+                    <div class="col-3 px-0">
+                        <div class="bg-secondary text-center p-4">
+                            <h1 class="text-white" data-toggle="counter-up">{{aboutUs?.instructors}}</h1>
+                            <h6 class="text-uppercase text-white">Skilled<span class="d-block">Instructors</span></h6>
+                        </div>
+                    </div>
+                    <div class="col-3 px-0">
+                        <div class="bg-warning text-center p-4">
+                            <h1 class="text-white" data-toggle="counter-up">{{aboutUs?.students}}</h1>
+                            <h6 class="text-uppercase text-white">Happy<span class="d-block">Students</span></h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- About End -->
+
+
+
+
+<!-- Feature Start -->
+<div class="container-fluid py-5">
+    <div class="container py-5">
+        <div class="row">
+            <div [ngClass]="aboutUs?.chooses_img == null ? 'col-lg-12' : 'col-lg-7'" class="mb-5 mb-lg-0">
+                <div class="section-title position-relative mb-4">
+                    <h6 class="d-inline-block position-relative text-secondary text-uppercase pb-2">Why Choose Us?</h6>
+                    <h1 class="display-4">{{aboutUs?.chooses_us}}</h1>
+                </div>
+                <p class="mb-4 pb-2">{{aboutUs?.description_2}}</p>
+                <div class="d-flex mb-3 col-md-4">
+                    <div class="btn-icon bg-primary mr-4">
+                        <i class="fa fa-2x fa-graduation-cap text-white"></i>
+                    </div>
+                    <div class="mt-n1">
+                        <h4>killed Instructors</h4>
+                        <p>{{aboutUs?.about_instructors}}</p>
+                    </div>
+                </div>
+                <div class="d-flex mb-3 col-md-4">
+                    <div class="btn-icon bg-secondary mr-4">
+                        <i class="fa fa-2x fa-certificate text-white"></i>
+                    </div>
+                    <div class="mt-n1">
+                        <h4>International Certificate</h4>
+                        <p>{{aboutUs?.about_certificate}}</p>
+
+                    </div>
+                </div>
+                <div class="d-flex col-md-4">
+                    <div class="btn-icon bg-warning mr-4">
+                        <i class="fa fa-2x fa-book-reader text-white"></i>
+                    </div>
+                    <div class="mt-n1">
+                        <h4>Online Classes</h4>
+                        <p>{{aboutUs?.about_classes}}</p>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-5" style="min-height: 500px;" *ngIf="aboutUs?.chooses_img">
+                <div class="position-relative h-100">
+                    <img class="position-absolute w-100 h-100" alt="master key" src="{{path+aboutUs?.chooses_img}}"
+                        style="object-fit: cover;">
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<!-- Testimonial Start -->
+<div class="container-fluid bg-image py-5" style="margin: 90px 0;">
+    <div class="container py-5">
+        <div class="row align-items-center">
+            <div class="col-lg-5 mb-5 mb-lg-0">
+                <div class="section-title position-relative mb-4">
+                    <h6 class="d-inline-block position-relative text-secondary text-uppercase pb-2">Testimonial</h6>
+                    <h1 class="display-4">What Say Our Students</h1>
+                </div>
+                <p class="m-0 text-dark">Dolor est dolores et nonumy sit labore dolores est sed rebum amet, justo duo
+                    ipsum sanctus dolore magna rebum sit et. Diam lorem ea sea at. Nonumy et at at sed justo est nonumy
+                    tempor. Vero sea ea eirmod, elitr ea amet diam ipsum at amet. Erat sed stet eos ipsum diam</p>
+            </div>
+            <div class="col-lg-7">
+                <owl-carousel-o [options]="customOptions">
+                    <ng-container *ngFor="let item of testimonials">
+                        <ng-template carouselSlide [data-id]="item.id">
+                            <div class="bg-white p-5">
+                                <i class="fa fa-3x fa-quote-left text-primary mb-4"></i>
+                                <p>{{item.description}}</p>
+                                <div class="d-flex flex-shrink-0 align-items-center mt-4">
+                                    <img class="img-fluid mr-4 test-image" [src]="path+item.image" alt="">
+                                    <div>
+                                        <h5>{{item.name}}</h5>
+                                        <!-- <span>Web Design</span> -->
+                                    </div>
+                                </div>
+                            </div>
+                        </ng-template>
+                    </ng-container>
+                </owl-carousel-o>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Testimonial Start -->
+<app-loader *ngIf="loader"></app-loader>

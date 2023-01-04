@@ -1,0 +1,31 @@
+
+<app-header title="FAQS"></app-header>
+
+<!-- Courses Start -->
+
+   <div class="container">
+    <div class="accordion" id="accordionExample">
+        <div class="card" *ngFor='let question of questions; let i = index'>
+          <div class="card-header" id="headingOne">
+            <h2 class="mb-0">
+              <button [class.collapsed]="i == 0"  class="btn btn-link btn-block text-left "  type="button" data-toggle="collapse" attr.data-target=#collapse_{{i}}  aria-expanded="false" aria-controls="collapseOne">
+                #{{i + 1}} ) {{question.question }}
+              </button>
+            </h2>
+          </div>
+      
+          <div id="collapse_{{i}}" [class.show]="i == 0"  class="collapse " aria-labelledby="headingOne" data-parent="#accordionExample">
+            <div class="card-body">
+              {{question.answer }}
+            </div>
+          </div>
+        </div>
+   
+      </div>
+    
+</div>
+
+<app-loader *ngIf="loader"></app-loader>
+
+
+<!-- Courses End -->
