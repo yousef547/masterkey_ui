@@ -25,6 +25,56 @@
 </div>
 
 
+<div class="container px-0 py-5">
+    <div class="row mx-0 justify-content-center pt-5">
+        <div class="col-lg-6">
+            <div class="section-title text-center position-relative mb-4">
+                <h6 class="d-inline-block position-relative text-secondary text-uppercase pb-2">INSTRUCTORS</h6>
+                <h1 class="display-4">Meet Our Instructors</h1>
+            </div>
+        </div>
+    </div>
+    <owl-carousel-o [options]="teamsOptions">
+
+        <ng-container *ngFor="let team of teams" >
+          <ng-template carouselSlide >
+
+            <div class="team-item">
+                <img class="img-fluid w-100" src="{{path+team.image}}" alt="{{team.name}}">
+                <div class="bg-light text-center p-4">
+                    <h5 class="mb-3">{{team.name}}</h5>
+                    <p class="mb-2">description</p>
+                    <!-- <div class="d-flex justify-content-center">
+                        <a class="mx-1 p-1" href="#"><i class="fab fa-twitter"></i></a>
+                        <a class="mx-1 p-1" href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a class="mx-1 p-1" href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a class="mx-1 p-1" href="#"><i class="fab fa-instagram"></i></a>
+                        <a class="mx-1 p-1" href="#"><i class="fab fa-youtube"></i></a>
+                    </div> -->
+                </div>
+            </div>
+
+
+           <!-- <div class="courses-item position-relative">
+            <img class="img-fluid" src="{{path+team.image}}" alt="{{team.name}}">
+            <div class="courses-text">
+                <h4 class="text-center text-white px-3">{{team.name}}</h4>
+                <div class="border-top w-100 mt-3">
+                    <div class="d-flex justify-content-between p-4">
+                        <span class="text-white"><i class="fa fa-star mr-2"></i>4.5 <small>(250)</small></span>
+                    </div>
+                </div>
+                <div class="w-100 bg-white text-center p-4" >
+                </div>
+            </div>
+        </div> -->
+        <!-- <a class="btn btn-primary" routerLink="/courseDetails/{{team.id}}">Course Detail</a> -->
+          </ng-template>
+        </ng-container>
+           
+        </owl-carousel-o>
+</div>
+
 <app-loader *ngIf="loader"></app-loader>
 
 <!-- Feature Start -->

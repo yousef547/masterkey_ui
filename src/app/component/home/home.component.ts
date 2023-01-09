@@ -17,7 +17,7 @@ export class HomeComponent implements OnInit {
   path: any = environment.PathFile;
   isPage: boolean = false;
   testimonials: any;
-
+  courses:any;
   @ViewChild('myVideo', { static: true }) myVideoS: ElementRef | any;
   @ViewChild('play', { static: true }) play: ElementRef | any;
 
@@ -87,6 +87,15 @@ export class HomeComponent implements OnInit {
 
     })
   }
+  requestCourses(){
+    this._HttpRequestsService.serviceGet('courses/GetCourses').subscribe((res) => {
+     this.courses = res.courses.data;
+     console.log(this.courses)
+    this.loader = false;
+
+    })
+  }
+  
 
   customOptions: OwlOptions = {
     autoplay: true,
@@ -108,6 +117,37 @@ export class HomeComponent implements OnInit {
       }
     },
   }
+  CoursesOptions: OwlOptions = {
+    autoplay: true,
+        smartSpeed: 1500,
+        loop: true,
+        dots: false,
+        nav : false,
+        responsive: {
+            0:{
+                items:1
+            },
+            576:{
+                items:2
+            },
+            768:{
+                items:3
+            },
+            992:{
+                items:4
+            }
+        }
+  }
+
+  slides = [
+    {id: 1, img: "https://dummyimage.com/350x150/423b42/fff"},
+    {id: 2, img: "https://dummyimage.com/350x150/2a2b7a/fff"},
+    {id: 3, img: "https://dummyimage.com/350x150/1a2b7a/fff"},
+    {id: 4, img: "https://dummyimage.com/350x150/7a2b7a/fff"},
+    {id: 5, img: "https://dummyimage.com/350x150/9a2b7a/fff"},
+    {id: 6, img: "https://dummyimage.com/350x150/5a2b7a/fff"},
+    {id: 6, img: "https://dummyimage.com/350x150/4a2b7a/fff"}
+  ];
 
 
 
@@ -116,6 +156,7 @@ export class HomeComponent implements OnInit {
 
   ngOnInit(): void {
     this.getVideo();
+    this.requestCourses();
   }
 
 }

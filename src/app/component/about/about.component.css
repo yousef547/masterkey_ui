@@ -1,3 +1,16 @@
 .h-330{
     height: 330px;
 }
+
+.team-item img {
+
+    height: 430px;
+  }
+.display-4 {
+    width: 550px;
+}
+  /* .courses-item:hover .courses-text {
+      height: calc(100% + 20px);
+    }
+     */
+  

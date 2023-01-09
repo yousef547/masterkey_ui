@@ -24,3 +24,29 @@
     height: 100px !important;
 }
 
+.hight-section{
+    margin-top: 110px;
+}
+.hight-section .ng-star-inserted {
+    
+    height: 365px;
+}
+
+
+
+.courses-item img {
+  position: relative;
+  margin-top: 40px;
+  transition: .5s;
+  height: 430px;
+}
+.courses-item:hover .courses-text {
+    height: calc(100% + 20px);
+  }
+  
+
+/* .courses-list-item img {
+  position: relative;
+  transition: .5s;
+  height: 430px;
+} */

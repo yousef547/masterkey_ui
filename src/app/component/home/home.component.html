@@ -21,13 +21,13 @@
 <div class="container-fluid py-5">
     <div class="container py-5">
         <div class="row">
-            <div class="col-lg-5 mb-5 mb-lg-0" style="min-height: 500px;" *ngIf="aboutUs?.aboutimg">
+            <div class="col-lg-5 mb-5 mb-lg-0" style="min-height: 500px;" *ngIf="aboutUs?.about_img">
                 <div class="position-relative h-100">
-                    <img class="position-absolute w-100 h-100" alt="master key" src="{{path+aboutUs?.aboutimg}}"
+                    <img class="position-absolute w-100 h-100" alt="master key" src="{{path+aboutUs?.about_img}}"
                         style="object-fit: cover;">
                 </div>
             </div>
-            <div [ngClass]="aboutUs?.aboutimg == null ? 'col-lg-12' : 'col-lg-7'">
+            <div [ngClass]="aboutUs?.about_img == null ? 'col-lg-12' : 'col-lg-7'">
                 <div class="section-title position-relative mb-4 color-text">
                     <h6 class="d-inline-block position-relative text-secondary text-uppercase pb-2">About Us</h6>
                     <h1 class="display-4">{{aboutUs?.aboutus}}</h1>
@@ -37,7 +37,8 @@
                     <div class="col-3 px-0">
                         <div class="bg-success text-center p-4">
                             <h1 class="text-white" data-toggle="counter-up">{{aboutUs?.subjects}}</h1>
-                            <h6 class="text-uppercase text-white">Available<span class="d-block">Subjects</span></h6>
+                            <h6 class="text-uppercase text-white">Available  
+                                <span class="d-block">courses</span></h6>
                         </div>
                     </div>
                     <div class="col-3 px-0">
@@ -49,7 +50,8 @@
                     <div class="col-3 px-0">
                         <div class="bg-secondary text-center p-4">
                             <h1 class="text-white" data-toggle="counter-up">{{aboutUs?.instructors}}</h1>
-                            <h6 class="text-uppercase text-white">Skilled<span class="d-block">Instructors</span></h6>
+                            <h6 class="text-uppercase text-white">Success  
+                                <span class="d-block">rate</span></h6>
                         </div>
                     </div>
                     <div class="col-3 px-0">
@@ -69,7 +71,7 @@
 
 
 <!-- Feature Start -->
-<div class="container-fluid py-5">
+<div class="container-fluid py-5 bg-image">
     <div class="container py-5">
         <div class="row">
             <div [ngClass]="aboutUs?.chooses_img == null ? 'col-lg-12' : 'col-lg-7'" class="mb-5 mb-lg-0">
@@ -77,33 +79,33 @@
                     <h6 class="d-inline-block position-relative text-secondary text-uppercase pb-2">Why Choose Us?</h6>
                     <h1 class="display-4">{{aboutUs?.chooses_us}}</h1>
                 </div>
-                <p class="mb-4 pb-2">{{aboutUs?.description_2}}</p>
-                <div class="d-flex mb-3 col-md-4">
+                <p class="mb-4 pb-2 text-dark">{{aboutUs?.description_2}}</p>
+                <div class="d-flex mb-3 col-md-12">
                     <div class="btn-icon bg-primary mr-4">
                         <i class="fa fa-2x fa-graduation-cap text-white"></i>
                     </div>
                     <div class="mt-n1">
                         <h4>killed Instructors</h4>
-                        <p>{{aboutUs?.about_instructors}}</p>
+                        <p class="m-0 text-dark">{{aboutUs?.about_instructors}}</p>
                     </div>
                 </div>
-                <div class="d-flex mb-3 col-md-4">
+                <div class="d-flex mb-3 col-md-12">
                     <div class="btn-icon bg-secondary mr-4">
                         <i class="fa fa-2x fa-certificate text-white"></i>
                     </div>
                     <div class="mt-n1">
                         <h4>International Certificate</h4>
-                        <p>{{aboutUs?.about_certificate}}</p>
+                        <p class="m-0 text-dark">{{aboutUs?.about_certificate}}</p>
 
                     </div>
                 </div>
-                <div class="d-flex col-md-4">
+                <div class="d-flex col-md-12">
                     <div class="btn-icon bg-warning mr-4">
                         <i class="fa fa-2x fa-book-reader text-white"></i>
                     </div>
                     <div class="mt-n1">
                         <h4>Online Classes</h4>
-                        <p>{{aboutUs?.about_classes}}</p>
+                        <p class="m-0 text-dark">{{aboutUs?.about_classes}}</p>
 
                     </div>
                 </div>
@@ -120,6 +122,43 @@
 
 </div>
 
+
+
+    <!-- Courses Start -->
+    <div class="container-fluid px-0 py-5">
+        <div class="row mx-0 justify-content-center pt-5">
+            <div class="col-lg-6">
+                <div class="section-title text-center position-relative mb-4">
+                    <h6 class="d-inline-block position-relative text-secondary text-uppercase pb-2">Our Courses</h6>
+                    <h1 class="display-4">Checkout New Releases Of Our Courses</h1>
+                </div>
+            </div>
+        </div>
+        <owl-carousel-o [options]="CoursesOptions">
+   
+            <ng-container *ngFor="let course of courses" >
+              <ng-template carouselSlide >
+               <div class="courses-item position-relative">
+                <img class="img-fluid" src="{{path+course.image}}" alt="{{course.title}}">
+                <div class="courses-text">
+                    <h4 class="text-center text-white px-3">{{course.title}}</h4>
+                    <div class="border-top w-100 mt-3">
+                        <div class="d-flex justify-content-between p-4">
+                            <span class="text-white"><i class="fa fa-star mr-2"></i>4.5 <small>(250)</small></span>
+                        </div>
+                    </div>
+                    <div class="w-100 bg-white text-center p-4" >
+                        <a class="btn btn-primary" routerLink="/courseDetails/{{course.id}}">Course Detail</a>
+                    </div>
+                </div>
+               </div>
+              </ng-template>
+            </ng-container>
+               
+            </owl-carousel-o>
+    </div>
+    <!-- Courses End -->
+
 <!-- Testimonial Start -->
 <div class="container-fluid bg-image py-5" style="margin: 90px 0;">
     <div class="container py-5">
@@ -133,7 +172,7 @@
                     ipsum sanctus dolore magna rebum sit et. Diam lorem ea sea at. Nonumy et at at sed justo est nonumy
                     tempor. Vero sea ea eirmod, elitr ea amet diam ipsum at amet. Erat sed stet eos ipsum diam</p>
             </div>
-            <div class="col-lg-7">
+            <div class="col-lg-7 hight-section">
                 <owl-carousel-o [options]="customOptions">
                     <ng-container *ngFor="let item of testimonials">
                         <ng-template carouselSlide [data-id]="item.id">
