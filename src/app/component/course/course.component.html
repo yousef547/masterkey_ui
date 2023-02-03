@@ -23,7 +23,7 @@
                                 <span class="text-white">
                                     <!-- <i class="fa fa-user mr-2"></i> -->
                                 </span>
-                                <span class="text-white"><i class="fa fa-star mr-2"></i>{{course.rating}}
+                                <span *ngIf="course?.rating > 0" class="text-white"><i class="fa fa-star mr-2"></i>{{course.rating}}
                                     <small></small></span>
                             </div>
                         </div>

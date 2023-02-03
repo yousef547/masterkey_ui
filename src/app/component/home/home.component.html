@@ -85,7 +85,7 @@
                         <i class="fa fa-2x fa-graduation-cap text-white"></i>
                     </div>
                     <div class="mt-n1">
-                        <h4>killed Instructors</h4>
+                        <h4>Skilled Instructors</h4>
                         <p class="m-0 text-dark">{{aboutUs?.about_instructors}}</p>
                     </div>
                 </div>
@@ -144,7 +144,7 @@
                     <h4 class="text-center text-white px-3">{{course.title}}</h4>
                     <div class="border-top w-100 mt-3">
                         <div class="d-flex justify-content-between p-4">
-                            <span class="text-white"><i class="fa fa-star mr-2"></i>4.5 <small>(250)</small></span>
+                            <span *ngIf="course.rating > 0" class="text-white"><i class="fa fa-star mr-2"></i>{{course.rating}} <small>(250)</small></span>
                         </div>
                     </div>
                     <div class="w-100 bg-white text-center p-4" >
@@ -168,9 +168,7 @@
                     <h6 class="d-inline-block position-relative text-secondary text-uppercase pb-2">Testimonial</h6>
                     <h1 class="display-4">What Say Our Students</h1>
                 </div>
-                <p class="m-0 text-dark">Dolor est dolores et nonumy sit labore dolores est sed rebum amet, justo duo
-                    ipsum sanctus dolore magna rebum sit et. Diam lorem ea sea at. Nonumy et at at sed justo est nonumy
-                    tempor. Vero sea ea eirmod, elitr ea amet diam ipsum at amet. Erat sed stet eos ipsum diam</p>
+               
             </div>
             <div class="col-lg-7 hight-section">
                 <owl-carousel-o [options]="customOptions">
