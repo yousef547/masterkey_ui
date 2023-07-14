@@ -35,27 +35,27 @@
                 <p>{{aboutUs?.description}}</p>
                 <div class="row pt-3 mx-0">
                     <div class="col-3 px-0">
-                        <div class="bg-success text-center p-4">
+                        <div class="bg-success text-center p-2">
                             <h1 class="text-white" data-toggle="counter-up">{{aboutUs?.subjects}}</h1>
                             <h6 class="text-uppercase text-white">Available  
                                 <span class="d-block">courses</span></h6>
                         </div>
                     </div>
                     <div class="col-3 px-0">
-                        <div class="bg-primary text-center p-4">
+                        <div class="bg-primary text-center p-2">
                             <h1 class="text-white" data-toggle="counter-up">{{aboutUs?.courses}}</h1>
                             <h6 class="text-uppercase text-white">Online<span class="d-block">Courses</span></h6>
                         </div>
                     </div>
                     <div class="col-3 px-0">
-                        <div class="bg-secondary text-center p-4">
-                            <h1 class="text-white" data-toggle="counter-up">{{aboutUs?.instructors}}</h1>
+                        <div class="bg-secondary text-center p-2">
+                            <h1 class="text-white" data-toggle="counter-up">{{aboutUs?.instructors}} %</h1>
                             <h6 class="text-uppercase text-white">Success  
                                 <span class="d-block">rate</span></h6>
                         </div>
                     </div>
                     <div class="col-3 px-0">
-                        <div class="bg-warning text-center p-4">
+                        <div class="bg-warning text-center p-2">
                             <h1 class="text-white" data-toggle="counter-up">{{aboutUs?.students}}</h1>
                             <h6 class="text-uppercase text-white">Happy<span class="d-block">Students</span></h6>
                         </div>
@@ -178,7 +178,7 @@
                                 <i class="fa fa-3x fa-quote-left text-primary mb-4"></i>
                                 <p>{{item.description}}</p>
                                 <div class="d-flex flex-shrink-0 align-items-center mt-4">
-                                    <img class="img-fluid mr-4 test-image" [src]="path+item.image" alt="">
+                                    <img class="img-fluid mr-4 test-image" *ngIf="item.image != null" [src]="path+item.image" alt="">
                                     <div>
                                         <h5>{{item.name}}</h5>
                                         <!-- <span>Web Design</span> -->

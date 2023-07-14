@@ -1,11 +1,19 @@
 html {
-    --animation-duration: 2s;
-    --animation-delay-multiplier: 200ms;
-  }
-
-  h1,h2,h3,h4,h5,h6,.color-text,.text-secondary{
-    color: #eec768 !important;
+  --animation-duration: 2s;
+  --animation-delay-multiplier: 200ms;
 }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.color-text,
+.text-secondary {
+  color: #eec768 !important;
+}
+
 .backgroundColor {
   background: #eec768 !important;
 
@@ -26,22 +34,34 @@ html {
 
 
 .btn-outline-primary:hover {
-    color: #fff !important;
-    background-color: #46141f !important;
-    border-color: #46141f !important;
+  color: #fff !important;
+  background-color: #46141f !important;
+  border-color: #46141f !important;
 }
 
-.display-4 { 
+.display-4 {
   font-size: 2.5rem;
 }
 
-h6, .h6 {
+h6,
+.h6 {
   font-size: 1.5rem;
 }
 
 
+* {
+  font-family: 'Source Sans Pro', sans-serif !important;
+}
 
+.fa, .far, .fas {
+  font-family: "Font Awesome 5 Free" !important;
+}
+@media (max-width: 550px) {
+  h1 {
+    font-size: 20px !important;
+  }
 
-
-
-  
+  .display-4 {
+    width: 100% !important;
+}
+}
