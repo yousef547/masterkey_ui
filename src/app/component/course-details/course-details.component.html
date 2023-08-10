@@ -12,7 +12,7 @@
                     </div>
                     <img class="course-image rounded mb-4" src="{{path+courseDetails?.image}}"
                         alt="{{courseDetails?.title}}">
-                    <p>{{courseDetails?.description}}</p>
+                    <p class="description">{{courseDetails?.description}}</p>
 
                     <a  href="{{path+courseDetails?.attachment}}" class="font-weight-bold " *ngIf="courseDetails?.isattach">Download File <i class="fa fa-download"></i></a>
                 </div>

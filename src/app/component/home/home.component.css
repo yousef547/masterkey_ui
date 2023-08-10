@@ -45,6 +45,14 @@
   }
   
 
+  @media (max-width: 600px){
+    h6.text-uppercase {
+        font-size: 20px;
+    }
+  }
+
+  /*  */
+
 /* .courses-list-item img {
   position: relative;
   transition: .5s;

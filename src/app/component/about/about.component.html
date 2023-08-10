@@ -11,7 +11,7 @@
                 <div class="section-title position-relative mb-4 color-text">
                     <h1 class="display-4">{{about?.title}}</h1>
                 </div>
-                <p>{{about?.description}}</p>
+                <p [innerHtml]="about?.description"></p>
               
             </div>
             <div class="col-lg-5 mb-5 mb-lg-0" style="min-height: 500px;" *ngIf="about?.image">
@@ -43,7 +43,7 @@
                 <img class="img-fluid w-100" src="{{path+team.image}}" alt="{{team.name}}">
                 <div class="bg-light text-center p-4">
                     <h5 class="mb-3">{{team.name}}</h5>
-                    <p class="mb-2">description</p>
+                    <p class="mb-2" [innerHtml]="team.description"></p>
                     <!-- <div class="d-flex justify-content-center">
                         <a class="mx-1 p-1" href="#"><i class="fab fa-twitter"></i></a>
                         <a class="mx-1 p-1" href="#"><i class="fab fa-facebook-f"></i></a>
