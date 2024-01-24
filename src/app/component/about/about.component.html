@@ -12,11 +12,11 @@
                     <h1 class="display-4">{{about?.title}}</h1>
                 </div>
                 <p [innerHtml]="about?.description"></p>
-              
+
             </div>
             <div class="col-lg-5 mb-5 mb-lg-0" style="min-height: 500px;" *ngIf="about?.image">
                 <div class="position-relative h-100">
-                    <img class="position-absolute w-100 h-100" alt="master key" src="{{path+about?.image}}"
+                    <img class="position-absolute " alt="master key" src="{{path+about?.image}}"
                         style="object-fit: cover;">
                 </div>
             </div>
@@ -71,7 +71,7 @@
         <!-- <a class="btn btn-primary" routerLink="/courseDetails/{{team.id}}">Course Detail</a> -->
           </ng-template>
         </ng-container>
-           
+
         </owl-carousel-o>
 </div>
 
