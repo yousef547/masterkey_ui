@@ -30,6 +30,7 @@ getPosts(id:any) {
   this.loader = true;
 
   this._HttpRequestsService.serviceGet(`subject/GetPostById/${id}`).subscribe((data)=>{
+    console.log(data);
     this.posts = data.posts
     for(var i =0;i<data.posts.length;i++){
       if(data.posts[i].text != null){

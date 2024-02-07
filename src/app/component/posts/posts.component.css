@@ -42,9 +42,12 @@ a {
     font-size: inherit;
   }
   .card {
-    width: 50%;
+    width: 61%;
     margin: 15px auto;
     
+  }
+  .card-text p iframe  { 
+    width: 100% !important;
   }
   .w40 {
     width: 50px;
